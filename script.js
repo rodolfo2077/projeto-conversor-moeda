@@ -1,3 +1,5 @@
+const convertButton = document.querySelector(".btn-converter");
+
 function Converter() {
   const moedaSelecionada = document.getElementById("moeda").value;
   const entradaElement = document.querySelector(".display");
@@ -5,7 +7,8 @@ function Converter() {
 
   const cotacoes = {
     usd: 5.58,
-    brl: 1,
+    euro: 6.55,
+    iens: 26.67,
   };
 
   const cotacao = cotacoes[moedaSelecionada] || 0;
@@ -13,10 +16,18 @@ function Converter() {
 
   // Atualiza o valor em BRL
   const valorAtualBRL = document.getElementById("ValorAtual");
-  valorAtualBRL.textContent = `R$ ${entrada.toFixed(2)}`;
+  valorAtualBRL.innerHTML = new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  }).format(entradaElement.value);
 
   // Atualiza o valor em USD ou exibe erro
   const valorAtualUSD = document.getElementById("ValorConvertido");
-  valorAtualUSD.textContent =
-    cotacao > 0 ? `USD$ ${convertido.toFixed(2)}` : "USD$ Invalid Format";
+
+  valorAtualUSD.innerHTML = new Intl.NumberFormat("en", {
+    style: "currency",
+    currency: "USD",
+  }).format(convertido);
 }
+
+convertButton.addEventListener("click", Converter);
