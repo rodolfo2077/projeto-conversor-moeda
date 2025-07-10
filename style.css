@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  background-color: #8a51fc;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.conversor {
+  width: 375px;
+  height: 750px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f4f4f4;
+}
+
+/* Containeres de Moedas */
+
+#moedaDeOrigem,
+#moeda {
+  width: 315px;
+  height: 40px;
+  border: 1px solid #c7c7c7;
+  border-radius: 5px;
+  color: #3e3e3e;
+  padding: 5px;
+}
+
+.converterPara,
+.converterDe {
+  background-color: #ffffff;
+  width: 327px;
+  height: 72px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: #7a7a7a;
+  margin: 24px 0px 0px 24px;
+  box-shadow: 2px 2px 10px 2px;
+  padding: 5px;
+}
+
+select {
+  appearance: none;
+}
+
+/* End */
+
+.valorFinal {
+  background-color: #ffffff;
+  width: 327px;
+  height: 72px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: #bbbbbb;
+  margin: 44px 0px 0px 24px;
+  box-shadow: 2px 2px 10px 2px;
+}
+
+.btn-converter {
+  background-color: #8a51fc;
+  width: 327px;
+  height: 72px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: #bbbbbb;
+  margin: 24px 0px 0px 24px;
+  box-shadow: 2px 2px 10px 2px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+#btn-converter-txt {
+  color: #ffffff;
+}
+
+.btn-converter:hover {
+  background-color: #9578d0;
+  transform: scale(1.05);
+  transition: ease-in 0.4s;
+}
+
+.btn-converter:active {
+  background-color: #5e409b;
+  transition: ease-in 0.2s;
+}
+.container-valor-convertido {
+  width: 327px;
+  height: 276px;
+  border: 1px solid;
+  margin: 36px 24px 24px 24px;
+  border-radius: 20px;
+  color: #772fd3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.valor-convertido {
+  width: 127px;
+  height: 251px;
+  /* border: 1px solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container da Bandeira e valores */
+.valor {
+  width: 80px;
+  height: 90px;
+  color: #772fd3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.labelValue {
+  color: #000000;
+  font-size: 18px;
+}
+
+label {
+  color: #777777;
+}
+
+.bandeira:hover {
+  transform: scale(1.2);
+  transition: ease-in 0.5s;
+}
+
+/* End */
+
+/* Containeres das Bandeiras */
+.logo {
+  width: 256px;
+  margin: 0px 0px 15px 0px;
+  background-size: auto;
+}
+
+#converter-from {
+  width: 324px;
+  height: 50px;
+}
+
+#converter-to {
+  width: 324px;
+  height: 50px;
+}
+
+#arrow {
+  padding: 5px;
+}
+
+.display {
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c2c2cd7;
+  box-shadow: 1px 1px 5px 1px;
+  border: none;
+  margin-left: 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+#ValorConvertido {
+  text-align: center;
+}
+/* End */
+
+/* RESPONSIVIDADE */
+@media (max-width: 420px) {
+}
