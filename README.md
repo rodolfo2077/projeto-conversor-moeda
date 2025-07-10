@@ -1,4 +1,4 @@
-# EX | Exchange Currency desenvolvido como desafio pela DevClub
+# EX | Exchange Currency 
 
 Uma aplicação web responsiva para conversão de moedas internacionais desenvolvido na DevClub como desafio, com uma interface minimalista e moderna. Ideal para quem deseja converter valores de forma rápida e visualmente agradável.
 
