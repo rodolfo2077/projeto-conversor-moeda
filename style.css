@@ -16,7 +16,6 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -149,8 +148,6 @@ label {
 /* Containeres das Bandeiras */
 .logo {
   width: 256px;
-  margin: 0px 0px 15px 0px;
-  background-size: auto;
 }
 
 #converter-from {
