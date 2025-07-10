@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="container">
-      <img class="logo" src="./assets/moeda.gif" alt="imagem do logotipo" />
+      <img class="logo" src="./assets/ex.png" alt="imagem do logotipo" />
       <div class="conversor">
         <div class="converterDe">
           <label class="textoConverterDe">Converter <strong>de</strong></label>
@@ -30,7 +30,7 @@
           </select>
         </div>
         <div class="valorFinal">
-          <label><b>Valor</b></label>
+          <label id="valorLbl"><b>Valor</b></label>
           <input
             class="display"
             id="inputCurrency"
@@ -46,10 +46,10 @@
             <div class="valor">
               <!-- bandeira -->
               <img class="bandeira1" src="./assets/brasil.png" alt="" />
-              <label></label>
-              <label id="Valor1" for="">1</label>
+              <label id="Valorlbl1">Real Brasileiro</label>
+              <label id="Valor1" for="">10.000,00</label>
             </div>
-            <img id="arrow" src="./assets/arrow.png" alt="seta para baixo" />
+            <p id="arrow">🔃</p>
             <div class="valor">
               <img
                 class="bandeira2"
@@ -57,8 +57,8 @@
                 src="./assets/estados-unidos.png"
                 alt=""
               />
-              <label></label>
-              <label id="Valor2" for="">2</label>
+              <label id="Valorlbl2">Dólar Americano</label>
+              <label id="Valor2" for="">1,801.80</label>
             </div>
           </div>
         </div>

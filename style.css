@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  background-color: #8a51fc;
+  background-color: #efedec;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -19,12 +19,21 @@ body {
   align-items: center;
 }
 
+.logo {
+  width: 256px;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  transition: 0.9s ease-in;
+}
+
 .conversor {
   width: 375px;
   height: 750px;
   border: none;
   border-radius: 20px;
-  background-color: #f4f4f4;
+  background-color: #efedec;
 }
 
 /* Containeres de Moedas */
@@ -33,23 +42,26 @@ body {
 #selectCurrency2 {
   width: 315px;
   height: 40px;
-  border: 1px solid #c7c7c7;
-  border-radius: 5px;
-  color: #3e3e3e;
-  padding: 5px;
+  border-radius: 15px;
+  color: #666666;
+
+  font-weight: 700;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .converterPara,
 .converterDe {
-  background-color: #ffffff;
+  background-color: #5460ba19;
   width: 327px;
   height: 72px;
-  border: 1px solid;
-  border-radius: 4px;
-  color: #7a7a7a;
+  border-radius: 15px;
+  color: #666666;
   margin: 24px 0px 0px 24px;
-  box-shadow: 2px 2px 10px 2px;
   padding: 5px;
+  font-weight: 700;
+  font-size: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 select {
@@ -59,22 +71,24 @@ select {
 /* End */
 
 .valorFinal {
-  background-color: #ffffff;
+  background-color: #5460ba19;
   width: 327px;
   height: 72px;
-  border: 1px solid;
-  border-radius: 4px;
+  border-radius: 15px;
   color: #bbbbbb;
   margin: 44px 0px 0px 24px;
-  box-shadow: 2px 2px 10px 2px;
+}
+
+#valorLbl {
+  background-color: #5460ba19;
 }
 
 .btn-converter {
-  background-color: #8a51fc;
+  background-color: #484848;
   width: 327px;
   height: 72px;
   border: 1px solid;
-  border-radius: 4px;
+  border-radius: 20px;
   color: #bbbbbb;
   margin: 24px 0px 0px 24px;
   box-shadow: 2px 2px 10px 2px;
@@ -87,25 +101,34 @@ select {
 }
 
 .btn-converter:hover {
-  background-color: #9578d0;
+  background-color: #888888;
   transform: scale(1.05);
   transition: ease-in 0.4s;
 }
 
 .btn-converter:active {
-  background-color: #5e409b;
+  background-color: #2a2a2a;
   transition: ease-in 0.2s;
 }
 .container-valor-convertido {
   width: 327px;
   height: 276px;
-  border: 1px solid;
+  border: none;
   margin: 36px 24px 24px 24px;
   border-radius: 20px;
-  color: #772fd3;
+  background-color: #5460ba19;
+  color: #38383856;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#Valor1,
+#Valor2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #4b4b4b;
 }
 
 .valor-convertido {
@@ -138,17 +161,20 @@ label {
   color: #777777;
 }
 
-.bandeira:hover {
+.bandeira1:hover,
+.bandeira2:hover {
   transform: scale(1.2);
   transition: ease-in 0.5s;
+}
+
+.bandeira1,
+.bandeira2 {
+  transform: scale(0.8);
 }
 
 /* End */
 
 /* Containeres das Bandeiras */
-.logo {
-  width: 256px;
-}
 
 #converter-from {
   width: 324px;
@@ -161,7 +187,14 @@ label {
 }
 
 #arrow {
-  padding: 5px;
+  margin: 10px 0px 10px 0px;
+  font-size: 32px;
+}
+
+#Valorlbl1,
+#Valorlbl2 {
+  text-align: center;
+  font-weight: 600;
 }
 
 .display {
@@ -169,16 +202,18 @@ label {
   height: 40px;
   font-size: 20px;
   font-weight: 600;
-  color: #2c2c2cd7;
-  box-shadow: 1px 1px 5px 1px;
   border: none;
   margin-left: 10px;
+  padding: 2px 0px, 0px 5px;
   border-radius: 5px;
   outline: none;
+  appearance: none;
+  color: #515151;
 }
 
 #ValorConvertido {
   text-align: center;
+  background-color: #2c2c2c4e;
 }
 /* End */
 

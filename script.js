@@ -4,6 +4,13 @@ const currencyValue1 = document.querySelector("#Valor1");
 const currencyValue2 = document.querySelector("#Valor2");
 const selectCurrency1 = document.querySelector("#selectCurrency1");
 const selectCurrency2 = document.querySelector("#selectCurrency2");
+const Valorlbl1 = document.querySelector("#Valorlbl1");
+const Valorlbl2 = document.querySelector("#Valorlbl2");
+
+const brlLabel = "Real Brasileiro";
+const usdLabel = "Dólar Americano";
+const jpyLabel = "Iene Japonês";
+const euroLabel = "Euro";
 
 function Converter() {
   const usdCurrencyValue = 5.55;
@@ -168,56 +175,80 @@ function ChangeBanner() {
   if (selectCurrency1.value === "brl" && selectCurrency2.value === "usd") {
     bandeira1.src = "./assets/brasil.png";
     bandeira2.src = "./assets/estados-unidos.png";
+    Valorlbl1.innerHTML = brlLabel;
+    Valorlbl2.innerHTML = usdLabel;
   }
   if (selectCurrency1.value === "brl" && selectCurrency2.value === "euro") {
     bandeira1.src = "./assets/brasil.png";
     bandeira2.src = "./assets/euro.png";
+    Valorlbl1.innerHTML = brlLabel;
+    Valorlbl2.innerHTML = euroLabel;
   }
   if (selectCurrency1.value === "brl" && selectCurrency2.value === "iene") {
     bandeira1.src = "./assets/brasil.png";
     bandeira2.src = "./assets/jpy.png";
+    Valorlbl1.innerHTML = brlLabel;
+    Valorlbl2.innerHTML = jpyLabel;
   }
 
   // USD exchange change banners
   if (selectCurrency1.value === "usd" && selectCurrency2.value === "brl") {
     bandeira1.src = "./assets/estados-unidos.png";
     bandeira2.src = "./assets/brasil.png";
+    Valorlbl1.innerHTML = usdLabel;
+    Valorlbl2.innerHTML = brlLabel;
   }
   if (selectCurrency1.value === "usd" && selectCurrency2.value === "euro") {
     bandeira1.src = "./assets/estados-unidos.png";
     bandeira2.src = "./assets/euro.png";
+    Valorlbl1.innerHTML = usdLabel;
+    Valorlbl2.innerHTML = euroLabel;
   }
   if (selectCurrency1.value === "usd" && selectCurrency2.value === "iene") {
     bandeira1.src = "./assets/estados-unidos.png";
     bandeira2.src = "./assets/jpy.png";
+    Valorlbl1.innerHTML = usdLabel;
+    Valorlbl2.innerHTML = jpyLabel;
   }
 
   // JPY exchange change banners
   if (selectCurrency1.value === "iene" && selectCurrency2.value === "brl") {
     bandeira1.src = "./assets/jpy.png";
     bandeira2.src = "./assets/brasil.png";
+    Valorlbl1.innerHTML = jpyLabel;
+    Valorlbl2.innerHTML = brlLabel;
   }
   if (selectCurrency1.value === "iene" && selectCurrency2.value === "euro") {
     bandeira1.src = "./assets/jpy.png";
     bandeira2.src = "./assets/euro.png";
+    Valorlbl1.innerHTML = jpyLabel;
+    Valorlbl2.innerHTML = euroLabel;
   }
   if (selectCurrency1.value === "iene" && selectCurrency2.value === "usd") {
     bandeira1.src = "./assets/jpy.png";
     bandeira2.src = "./assets/estados-unidos.png";
+    Valorlbl1.innerHTML = jpyLabel;
+    Valorlbl2.innerHTML = usdLabel;
   }
 
   // EURO exchange change banners
   if (selectCurrency1.value === "euro" && selectCurrency2.value === "brl") {
     bandeira1.src = "./assets/euro.png";
     bandeira2.src = "./assets/brasil.png";
+    Valorlbl1.innerHTML = euroLabel;
+    Valorlbl2.innerHTML = brlLabel;
   }
   if (selectCurrency1.value === "euro" && selectCurrency2.value === "usd") {
     bandeira1.src = "./assets/euro.png";
     bandeira2.src = "./assets/estados-unidos.png";
+    Valorlbl1.innerHTML = euroLabel;
+    Valorlbl2.innerHTML = usdLabel;
   }
   if (selectCurrency1.value === "euro" && selectCurrency2.value === "iene") {
     bandeira1.src = "./assets/euro.png";
     bandeira2.src = "./assets/jpy.png";
+    Valorlbl1.innerHTML = euroLabel;
+    Valorlbl2.innerHTML = jpyLabel;
   }
 
   /* Call IsBannersValid funtion to valid the banners */
