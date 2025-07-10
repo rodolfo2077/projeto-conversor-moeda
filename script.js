@@ -1,27 +1,22 @@
 function Converter() {
-  const moeda = document.getElementById("moeda");
+  const moedaSelecionada = document.getElementById("moeda").value;
+  const entradaElement = document.querySelector(".display");
+  const entrada = parseFloat(entradaElement.value);
 
-  let cotacao = 0;
-  if (moeda.value === "usd") cotacao = 5.58;
-  if (moeda.value === "brl") cotacao = 1;
+  const cotacoes = {
+    usd: 5.58,
+    brl: 1,
+  };
 
-  const entradaElement = document.getElementsByClassName("display")[0];
-  const entrada = entradaElement.value;
+  const cotacao = cotacoes[moedaSelecionada] || 0;
+  const convertido = entrada / cotacao;
 
-  const resultado = parseFloat(entrada);
-
-  const soma = resultado / cotacao;
-
-  /* Mostrar os valores nos campos correspondente das moedas */
-
-  // -- BRL --
+  // Atualiza o valor em BRL
   const valorAtualBRL = document.getElementById("ValorAtual");
+  valorAtualBRL.textContent = `R$ ${entrada.toFixed(2)}`;
 
-  valorAtualBRL.textContent = `R$ ` + resultado.toFixed(2);
-
-  // -- USD --
+  // Atualiza o valor em USD ou exibe erro
   const valorAtualUSD = document.getElementById("ValorConvertido");
-
-  if (cotacao === 5.58) valorAtualUSD.textContent = `USD$ ` + soma.toFixed(2);
-  if (cotacao === 1) valorAtualUSD.textContent = `USD$ ` + `Invalid Format`;
+  valorAtualUSD.textContent =
+    cotacao > 0 ? `USD$ ${convertido.toFixed(2)}` : "USD$ Invalid Format";
 }
