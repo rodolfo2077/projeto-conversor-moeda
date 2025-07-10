@@ -29,8 +29,8 @@ body {
 
 /* Containeres de Moedas */
 
-#moedaDeOrigem,
-#moeda {
+#selectCurrency1,
+#selectCurrency2 {
   width: 315px;
   height: 40px;
   border: 1px solid #c7c7c7;
