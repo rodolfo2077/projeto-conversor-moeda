@@ -1,5 +1,7 @@
 # EX | Exchange Currency 
 
+Acesse por aqui: https://rodolfo2077.github.io/projeto-conversor-moeda/
+
 Uma aplicação web responsiva para conversão de moedas internacionais desenvolvido na DevClub como desafio, com uma interface minimalista e moderna. Ideal para quem deseja converter valores de forma rápida e visualmente agradável.
 
 ![EX Preview](./assets/ArtConcept.png)
