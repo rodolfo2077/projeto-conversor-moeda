@@ -1,6 +1,6 @@
-# EX | Exchange Currency
+# EX | Exchange Currency 
 
-Uma aplicação web responsiva para conversão de moedas internacionais em tempo real, com uma interface minimalista e moderna. Ideal para quem deseja converter valores de forma rápida e visualmente agradável.
+Uma aplicação web responsiva para conversão de moedas internacionais desenvolvido na DevClub como desafio, com uma interface minimalista e moderna. Ideal para quem deseja converter valores de forma rápida e visualmente agradável.
 
 ![EX Preview](./assets/ArtConcept.png)
 
@@ -12,7 +12,7 @@ Uma aplicação web responsiva para conversão de moedas internacionais em tempo
 - Seleção de moeda de origem e destino (ex: EUR → JPY)
 - Valores exibidos com formatação internacional
 - Interface totalmente responsiva
-- 🇪🇺 Exibição de ícones de moeda e bandeiras
+- Exibição de ícones de moeda e bandeiras
 
 ---
 
@@ -20,7 +20,7 @@ Uma aplicação web responsiva para conversão de moedas internacionais em tempo
 
 - HTML5
 - CSS3
-- JavaScript (Vanilla)
+- JavaScript
 - `Intl.NumberFormat` (formatação monetária)
 - Layout com Flexbox
 
@@ -28,7 +28,7 @@ Uma aplicação web responsiva para conversão de moedas internacionais em tempo
 
 ## Preview
 
-### Versão Desktop e 📱 Mobile:
+### Versão Desktop e Mobile:
 
 <p align="center">
   <img src="./assets/ArtConcept.png" alt="Mockup Desktop e Mobile" width="600px"/>
