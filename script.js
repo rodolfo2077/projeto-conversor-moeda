@@ -1,3 +1,5 @@
+// Consumir API https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL
+
 const btnConverter = document.querySelector(".btn-converter");
 const inputCurrency = document.querySelector("#inputCurrency");
 const currencyValue1 = document.querySelector("#Valor1");
@@ -12,10 +14,34 @@ const usdLabel = "Dólar Americano";
 const jpyLabel = "Iene Japonês";
 const euroLabel = "Euro";
 
-function Converter() {
-  const usdCurrencyValue = 5.55;
-  const euroCurrencyValue = 6.3;
-  const ieneCurrencyValue = 0.038;
+async function Converter() {
+  const data = await fetch(
+    "https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,BRL-USD,BRL-JPY,BRL-EUR,JPY-BRL,EUR-USD,JPY-USD,USD-JPY,EUR-JPY,USD-EUR,JPY-EUR"
+  ).then((response) => response.json());
+
+  // console.log(data);
+
+  // Consumir os dados em tempo real apartir do api de economia acima
+
+  /* BRL TO Others */
+  const usdbrl = data.USDBRL.high;
+  const jpybrl = data.JPYBRL.high;
+  const eurobrl = data.EURBRL.high;
+
+  /* USD TO Others */
+  const brlusd = data.BRLUSD.high;
+  const eurousd = data.EURUSD.high;
+  const jpyusd = data.JPYUSD.high;
+
+  /* JPY TO Others */
+  const brljpy = data.BRLJPY.high;
+  const usdjpy = data.USDJPY.high;
+  const eurojpy = data.EURJPY.high;
+
+  /* EUR TO Others */
+  const brleuro = data.BRLEUR.high;
+  const usdeuro = data.USDEUR.high;
+  const jpyeuro = data.JPYEUR.high;
 
   /* BRL exchange currency */
   if (selectCurrency1.value === "brl" && selectCurrency2.value === "usd") {
@@ -27,7 +53,7 @@ function Converter() {
     currencyValue2.innerHTML = new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
-    }).format(inputCurrency.value / usdCurrencyValue);
+    }).format(inputCurrency.value / usdbrl);
   }
   if (selectCurrency1.value === "brl" && selectCurrency2.value === "euro") {
     currencyValue1.innerHTML = new Intl.NumberFormat("pt-BR", {
@@ -38,7 +64,7 @@ function Converter() {
     currencyValue2.innerHTML = new Intl.NumberFormat("en-UK", {
       style: "currency",
       currency: "EUR",
-    }).format(inputCurrency.value / euroCurrencyValue);
+    }).format(inputCurrency.value / eurobrl);
   }
   if (selectCurrency1.value === "brl" && selectCurrency2.value === "iene") {
     currencyValue1.innerHTML = new Intl.NumberFormat("pt-BR", {
@@ -49,7 +75,7 @@ function Converter() {
     currencyValue2.innerHTML = new Intl.NumberFormat("ja-JP", {
       style: "currency",
       currency: "JPY",
-    }).format(inputCurrency.value / ieneCurrencyValue);
+    }).format(inputCurrency.value / jpybrl);
   }
   if (
     /* #ENDREGION */
@@ -66,7 +92,7 @@ function Converter() {
     currencyValue2.innerHTML = new Intl.NumberFormat("pt-BR", {
       style: "currency",
       currency: "BRL",
-    }).format(inputCurrency.value / 0.18);
+    }).format(inputCurrency.value / brlusd);
   }
   if (selectCurrency1.value === "usd" && selectCurrency2.value === "euro") {
     currencyValue1.innerHTML = new Intl.NumberFormat("en-US", {
@@ -77,7 +103,7 @@ function Converter() {
     currencyValue2.innerHTML = new Intl.NumberFormat("en-UK", {
       style: "currency",
       currency: "EUR",
-    }).format(inputCurrency.value / 1.17);
+    }).format(inputCurrency.value / eurousd);
   }
   if (selectCurrency1.value === "usd" && selectCurrency2.value === "iene") {
     currencyValue1.innerHTML = new Intl.NumberFormat("en-US", {
@@ -88,7 +114,7 @@ function Converter() {
     currencyValue2.innerHTML = new Intl.NumberFormat("ja-JP", {
       style: "currency",
       currency: "JPY",
-    }).format(inputCurrency.value / 0.0068);
+    }).format(inputCurrency.value / jpyusd);
   }
   if (
     /* #ENDREGION */
@@ -105,7 +131,7 @@ function Converter() {
     currencyValue2.innerHTML = new Intl.NumberFormat("pt-BR", {
       style: "currency",
       currency: "BRL",
-    }).format(inputCurrency.value / 26.36);
+    }).format(inputCurrency.value / brljpy);
   }
   if (selectCurrency1.value === "iene" && selectCurrency2.value === "usd") {
     currencyValue1.innerHTML = new Intl.NumberFormat("ja-JP", {
@@ -116,7 +142,7 @@ function Converter() {
     currencyValue2.innerHTML = new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
-    }).format(inputCurrency.value / 146.35);
+    }).format(inputCurrency.value / usdjpy);
   }
   if (selectCurrency1.value === "iene" && selectCurrency2.value === "euro") {
     currencyValue1.innerHTML = new Intl.NumberFormat("ja-JP", {
@@ -127,7 +153,7 @@ function Converter() {
     currencyValue2.innerHTML = new Intl.NumberFormat("en-UK", {
       style: "currency",
       currency: "EUR",
-    }).format(inputCurrency.value / 171.06);
+    }).format(inputCurrency.value / eurojpy);
   }
 
   /* EURO Exchange currency */
@@ -140,7 +166,7 @@ function Converter() {
     currencyValue2.innerHTML = new Intl.NumberFormat("pt-BR", {
       style: "currency",
       currency: "BRL",
-    }).format(inputCurrency.value / 0.15);
+    }).format(inputCurrency.value / brleuro);
   }
   if (selectCurrency1.value === "euro" && selectCurrency2.value === "usd") {
     currencyValue1.innerHTML = new Intl.NumberFormat("en-UK", {
@@ -151,7 +177,7 @@ function Converter() {
     currencyValue2.innerHTML = new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
-    }).format(inputCurrency.value / 0.86);
+    }).format(inputCurrency.value / usdeuro);
   }
   if (selectCurrency1.value === "euro" && selectCurrency2.value === "iene") {
     currencyValue1.innerHTML = new Intl.NumberFormat("en-UK", {
@@ -162,7 +188,7 @@ function Converter() {
     currencyValue2.innerHTML = new Intl.NumberFormat("ja-JP", {
       style: "currency",
       currency: "JPY",
-    }).format(inputCurrency.value / 0.0058);
+    }).format(inputCurrency.value / jpyeuro);
   }
 }
 
